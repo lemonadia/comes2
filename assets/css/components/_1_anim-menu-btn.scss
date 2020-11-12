@@ -21,7 +21,7 @@ Usage: codyhouse.co/license
   align-items: center;
   width: var(--anim-menu-btn-size);
   height: var(--anim-menu-btn-size);
-  color: var(--color-contrast-high); // icon color
+  color: red; // icon color
 }
 
 // icons
@@ -31,13 +31,14 @@ Usage: codyhouse.co/license
   font-size: var(--anim-menu-btn-icon-size);
   width: 1em;
   height: var(--anim-menu-btn-icon-stroke);
-  color: var(--color-text-nav);
+  color: red;
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   transform: scale(1);
 
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -52,22 +53,25 @@ Usage: codyhouse.co/license
 .anim-menu-btn__icon--close {
   background-size: 100% 100%;
   will-change: transform, background-size;
-  transition: transform .2s, background-size .2s;
+  transition: transform 0.2s, background-size 0.2s;
 
   .anim-menu-btn:active & {
     transform: scale(0.9);
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     will-change: inherit;
     transition: inherit;
   }
 
-  &::before { // line top
+  &::before {
+    // line top
     transform: translateY(-0.25em) rotate(0);
   }
 
-  &::after { // line bottom
+  &::after {
+    // line bottom
     transform: translateY(0.25em) rotate(0);
   }
 }
@@ -93,23 +97,26 @@ Usage: codyhouse.co/license
 .anim-menu-btn__icon--arrow-down {
   border-radius: 50em;
   will-change: transform;
-  transition: transform .2s;
+  transition: transform 0.2s;
 
   .anim-menu-btn:active & {
     transform: scale(0.9);
   }
 
-  &::before, &::after {
-    transform-origin: calc(var(--anim-menu-btn-icon-stroke)/2) 50%;
+  &::before,
+  &::after {
+    transform-origin: calc(var(--anim-menu-btn-icon-stroke) / 2) 50%;
     will-change: transform, width;
-    transition: transform .2s, width .2s;
+    transition: transform 0.2s, width 0.2s;
   }
 
-  &::before { // line top
+  &::before {
+    // line top
     transform: translateY(-0.25em) rotate(0);
   }
 
-  &::after { // line bottom
+  &::after {
+    // line bottom
     transform: translateY(0.25em) rotate(0);
   }
 }
@@ -127,7 +134,8 @@ Usage: codyhouse.co/license
   .anim-menu-btn__icon--arrow-right,
   .anim-menu-btn__icon--arrow-up,
   .anim-menu-btn__icon--arrow-down {
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 50%;
     }
 

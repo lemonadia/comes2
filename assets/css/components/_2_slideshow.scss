@@ -41,12 +41,30 @@ Usage: codyhouse.co/license
   align-items: center;
   justify-content: flex-start;
   height: var(--slideshow-height);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-
+  padding-left: 20px;
+  @include breakpoint(md) {
+    padding-left: 80px;
+  }
   &:focus {
     outline: none;
+  }
+  &:before {
+    content: "";
+    width: 5px;
+    height: 21%;
+    position: absolute;
+    background-color: white;
+    top: 120px;
+    left: 6%;
+  }
+  &:after {
+    content: "";
+    width: 5px;
+    height: 21%;
+    position: absolute;
+    background-color: white;
+    bottom: 110px;
+    left: 6%;
   }
 }
 
@@ -70,12 +88,14 @@ Usage: codyhouse.co/license
 .js {
   .slideshow {
     position: relative;
-    z-index: 1;
+    z-index: 9;
     overflow: hidden;
   }
 
   .slideshow__content {
-    overflow: hidden;
+    // overflow: hidden;
+    width: 100vw;
+    height: 110vh;
   }
 
   .slideshow__item {
@@ -84,6 +104,7 @@ Usage: codyhouse.co/license
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     visibility: hidden;
   }
 
@@ -392,13 +413,18 @@ Usage: codyhouse.co/license
   // created in JS
   position: absolute;
   z-index: 4;
-  bottom: 0;
+  bottom: 40px;
   width: 100%;
   height: 32px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background: transparent;
+  z-index: 99999;
+  margin-left: 20px;
+  @include breakpoint(lg) {
+    margin-left: 80px;
+  }
 }
 
 .slideshow__nav-item {

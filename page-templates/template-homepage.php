@@ -6,88 +6,96 @@
     
 <?php get_header( ); ?>
 
-    <section class="flex items-center bg-dark height-100vh">
-        <div class="slideshow js-slideshow slideshow--transition-slide container max-width-lg margin-auto"
+<section class="hero flex items-center positinon-relative">
+    <div class="element-hamburger-diagonal"></div>
+    <div class="element-hamburger-horizontal"></div>
+        <div class="slideshow js-slideshow slideshow--transition-slide"
              data-swipe="on">
             <p class="sr-only">Slideshow Items</p>
             <ul class="slideshow__content">
-                <li class="slideshow__item js-slideshow__item">
-                    <div class="grid gap-md">
-                        <div class="col-8@md">
-                        <h1 class="flex color-primary text-uppercase">Perfekcja W Diagnostyce</h1>
-
-                            <a href="/" class="color-secondary text-md block margin-top-lg"><span>Sprawdź naszą ofertę</span>
+                <li class="slideshow__item js-slideshow__item " style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/hero1.png') center;    background-size: cover;">
+                    <div class="grid text-hero">
+                        <div class="col-12@md">
+                        <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
+                            <a href="/" class="btn block margin-top-sm"><span>Sprawdź naszą ofertę</span>
                             </a>
                         </div>
                     </div>
                 </li>
-
-                <li class="slideshow__item js-slideshow__item">
-                    <div class="grid">
-                        <div class="col-8@lg">
-                            <div class="text-component">
-                                <h2 class="font-semibold flex color-primary text-uppercase">brands impossible to ignore</h2>
-                                <a href="/" class="color-primary text-md block margin-top-lg"><span>work with us</span>
-                                    <svg class="margin-left-xs" width="13" id="Layer_1" data-name="Layer 1"
-                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.206 13.17221">
-                                        <title>arrow</title>
-                                        <path d="M.33447,1.08227h12v12m0-12-11.5,11.464"
-                                              transform="translate(-0.12847 -0.08227)"
-                                              style="fill: none;stroke: #fcd6ac;stroke-width: 2px"/>
-                                    </svg>
-                                </a>
-                            </div>
+            
+                <li class="slideshow__item js-slideshow__item"  style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/hero3.png') center;    background-size: cover;">
+                     <div class="grid">
+                        <div class="col-12@md">
+                        <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
+                            <a href="/" class=" btn color-secondary text-md block margin-top-sm"><span>Sprawdź naszą ofertę</span>
+                            </a>
                         </div>
                     </div>
                 </li>
                 <li class="slideshow__item js-slideshow__item">
-                    <div class="grid">
-                        <div class="col-7@lg">
-                            <div class="text-component">
-                                <h2 class="font-semibold flex color-tertiary text-uppercase">true partnership experience</h2>
-                                <a href="/" class="color-tertiary text-md block margin-top-lg"><span>work with us</span>
-                                    <svg class="margin-left-xs" width="13" id="Layer_1" data-name="Layer 1"
-                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.206 13.17221">
-                                        <title>arrow</title>
-                                        <path d="M.33447,1.08227h12v12m0-12-11.5,11.464"
-                                              transform="translate(-0.12847 -0.08227)"
-                                              style="fill: none;stroke: #d9e7f6;stroke-width: 2px"/>
-                                    </svg>
-                                </a>
-                            </div>
+                  <div class="grid">
+                        <div class="col-12@md">
+                        <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
+                            <a href="/" class="color-secondary text-md block margin-top-sm"><span>Sprawdź naszą ofertę</span>
+                            </a>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="offer height-100vh">
+
+    <section class="offer">
         <div class="container max-width-lg padidng-bottom-xl">
             <img src="" alt="">
-            <h1 class="header-draw ">Oferta</h1>
+            <h1 class="header-draw text-uppercase">Oferta</h1>
         </div>
             <div class="drag-gallery js-drag-gallery padding-top-xl">
                 <ul class="drag-gallery__list">
-                    <li class="drag-gallery__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry.png" alt="szarpak">
+                    <li class="drag-gallery__item ">
+                         
+                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry.png" alt="szarpak">
                     </li>
-                    <li class="drag-gallery__item">
+                    <li class="drag-gallery__item szarpak-line">
+                         <h2 class="text-uppercase">Szarpaki</h2>
+                         <img class="line-szarpak" src="<?php echo get_stylesheet_directory_uri(); ?>/images/line.png" alt="szarpak">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/szarpak.png" alt="szarpak">
                     </li>
                 </ul>
              <div aria-hidden="true" class="drag-gallery__gesture-hint"></div>
         </div>
     </section>
+    
+
+    <section class="padding-top-xxl about height-100vh">
+       <!-- <div class="container max-width-lg"> -->
+           <img src="" alt="">
+           <h1 class="text-uppercase">O Nas </h1>
+            <div class="flex  flex-column flex-row@md items-center@md gap-lg">
+                <div class="about-text">
+                    <p class="text-uppercase margin-bottom-xxxs">comes</p>
+                    <p class="margin-bottom-md">urządzenia do diagnostyki pojazdów</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <p class="padding-top-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <a href="/" class="btn btn--contact margin-top-xxxxl@md block text-uppercase"><span>Skontaktuj się z nami</span></a>
+
+                </div>
+                <div class="about-image">
+                    <div class="image-about">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aboutphoto.png" alt="szarpak">
+                    </div>
+                </div>
+            </div>
+       <!-- </div> -->
+    </section>
+
     <section class="contact height-100vh">
          <div class="container max-width-lg">
             <img src="" alt="">
-            <h1 class="header-draw"></h1>
+            <!-- <h1 class="header-draw"></h1> -->
          </div>
 
         </div>
-    </section>
-    <section class="about height-100vh">
-       
     </section>
 
 

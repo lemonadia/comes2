@@ -25,36 +25,30 @@
 <body <?php body_class( '' ); ?> >
 <div class="drawer js-drawer" id="dr-nav-id">
   <div class="drawer__content" role="alertdialog" aria-labelledby="dr-nav-title">
-    <div class="drawer__body flex flex-column js-drawer__body">
+    <div class="drawer__body js-drawer__body">
       <nav class="dr-nav padding-md" aria-label="Main">
-        <ul>
+        <!-- <ul>
           <li>
             <a class="dr-nav__link" href="#0">
-              <span>News</span>
+              <span>O nas</span>
             </a>
           </li>
           <li>
             <a class="dr-nav__link" href="#0">
-              <span>Creative Industry</span>
-          
+              <span>Oferta</span>
             </a>
           </li>
           <li>
             <a class="dr-nav__link" href="#0">
-              <span>Video</span>
+              <span>Do pobrania</span>
             </a>
           </li>
           <li>
             <a class="dr-nav__link" href="#0">
-              <span>Photography</span>
+              <span>Kontak</span>
             </a>
           </li>
-          <li>
-            <a class="dr-nav__link" href="#0">
-              <span>Tutorials</span>
-            </a>
-          </li>
-        </ul>
+        </ul> -->
       </nav>
     </div>
   </div>
@@ -64,7 +58,7 @@
   <div class="container height-100% flex items-center">
     <button class="reset margin-left-auto dr-nav-control anim-menu-btn js-anim-menu-btn js-dr-nav-control js-tab-focus" aria-label="Toggle navigation" aria-controls="dr-nav-id">
       <svg class="dr-nav-control__bg" aria-hidden="true" viewBox="0 0 48 48">
-        <circle cx="24" cy="24" r="22" stroke-miterlimit="10" /></svg>
+      </svg>
       <i class="anim-menu-btn__icon anim-menu-btn__icon--arrow-right" aria-hidden="true"></i>
     </button>
   </div>

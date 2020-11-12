@@ -6,7 +6,7 @@
 
 :root {
   // font family
-  --font-primary: sans-serif;
+  --font-primary: "Lato";
 
   // font size
   --text-base-size: 1em; // body font-size
@@ -23,11 +23,20 @@
   --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
 }
 
-:root, * {
+body {
+  font-family: "Lato";
+}
+
+:root,
+* {
   // type scale
-  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-xs: calc(
+    (var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio)
+  );
   --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-md: calc(
+    var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
   --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
   --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
@@ -39,7 +48,15 @@ a {
   text-decoration: none;
 }
 
-@supports(--css: variables) {
+section {
+  h1 {
+    border-bottom: 5px solid black;
+    width: fit-content;
+    padding-bottom: 5px;
+    padding-right: 25px;
+  }
+}
+@supports (--css: variables) {
   @include breakpoint(md) {
     :root {
       --text-base-size: 1.25em;
@@ -49,7 +66,7 @@ a {
 
   @include breakpoint(xl) {
     :root {
-      --text-base-size: 1.30em;
+      --text-base-size: 1.3em;
       --text-scale-ratio: 1.28;
     }
   }
@@ -59,57 +76,14 @@ body {
   font-family: var(--font-primary);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-primary);
-  font-weight: 700;
 }
 
 // font family
-.font-primary { font-family: var(--font-primary); }
-
-// color
-.color-secondary-darker { color: alpha(var(--color-secondary-darker), var(--color-o, 1)); }
-.color-secondary-dark { color: alpha(var(--color-secondary-dark), var(--color-o, 1)); }
-.color-secondary { color: alpha(var(--color-secondary), var(--color-o, 1)); }
-.color-secondary-light { color: alpha(var(--color-secondary-light), var(--color-o, 1)); }
-.color-secondary-lighter { color: alpha(var(--color-secondary-lighter), var(--color-o, 1)); }
-.color-tertiary-darker { color: alpha(var(--color-tertiary-darker), var(--color-o, 1)); }
-.color-tertiary-dark { color: alpha(var(--color-tertiary-dark), var(--color-o, 1)); }
-.color-tertiary { color: alpha(var(--color-tertiary), var(--color-o, 1)); }
-.color-tertiary-light { color: alpha(var(--color-tertiary-light), var(--color-o, 1)); }
-.color-tertiary-lighter { color: alpha(var(--color-tertiary-lighter), var(--color-o, 1)); }
-.color-dark-darker { color: alpha(var(--color-dark-darker), var(--color-o, 1)); }
-.color-dark-dark { color: alpha(var(--color-dark-dark), var(--color-o, 1)); }
-.color-dark { color: alpha(var(--color-dark), var(--color-o, 1)); }
-.color-dark-light { color: alpha(var(--color-dark-light), var(--color-o, 1)); }
-.color-dark-lighter { color: alpha(var(--color-dark-lighter), var(--color-o, 1)); }
-.color-light-darker { color: alpha(var(--color-light-darker), var(--color-o, 1)); }
-.color-light-dark { color: alpha(var(--color-light-dark), var(--color-o, 1)); }
-.color-light { color: alpha(var(--color-light), var(--color-o, 1)); }
-.color-light-light { color: alpha(var(--color-light-light), var(--color-o, 1)); }
-.color-light-lighter { color: alpha(var(--color-light-lighter), var(--color-o, 1)); }
-.color-text-light-darker { color: alpha(var(--color-text-light-darker), var(--color-o, 1)); }
-.color-text-light-dark { color: alpha(var(--color-text-light-dark), var(--color-o, 1)); }
-.color-text-light { color: alpha(var(--color-text-light), var(--color-o, 1)); }
-.color-text-light-light { color: alpha(var(--color-text-light-light), var(--color-o, 1)); }
-.color-text-light-lighter { color: alpha(var(--color-text-light-lighter), var(--color-o, 1)); }
-.color-text-dark-darker { color: alpha(var(--color-text-dark-darker), var(--color-o, 1)); }
-.color-text-dark-dark { color: alpha(var(--color-text-dark-dark), var(--color-o, 1)); }
-.color-text-dark { color: alpha(var(--color-text-dark), var(--color-o, 1)); }
-.color-text-dark-light { color: alpha(var(--color-text-dark-light), var(--color-o, 1)); }
-.color-text-dark-lighter { color: alpha(var(--color-text-dark-lighter), var(--color-o, 1)); }
-.color-text-nav-darker { color: alpha(var(--color-text-nav-darker), var(--color-o, 1)); }
-.color-text-nav-dark { color: alpha(var(--color-text-nav-dark), var(--color-o, 1)); }
-.color-text-nav { color: alpha(var(--color-text-nav), var(--color-o, 1)); }
-.color-text-nav-light { color: alpha(var(--color-text-nav-light), var(--color-o, 1)); }
-.color-text-nav-lighter { color: alpha(var(--color-text-nav-lighter), var(--color-o, 1)); }
-.color-footer-light-darker { color: alpha(var(--color-footer-light-darker), var(--color-o, 1)); }
-.color-footer-light-dark { color: alpha(var(--color-footer-light-dark), var(--color-o, 1)); }
-.color-footer-light { color: alpha(var(--color-footer-light), var(--color-o, 1)); }
-.color-footer-light-light { color: alpha(var(--color-footer-light-light), var(--color-o, 1)); }
-.color-footer-light-lighter { color: alpha(var(--color-footer-light-lighter), var(--color-o, 1)); }
-.color-medium-darker { color: alpha(var(--color-medium-darker), var(--color-o, 1)); }
-.color-medium-dark { color: alpha(var(--color-medium-dark), var(--color-o, 1)); }
-.color-medium { color: alpha(var(--color-medium), var(--color-o, 1)); }
-.color-medium-light { color: alpha(var(--color-medium-light), var(--color-o, 1)); }
-.color-medium-lighter { color: alpha(var(--color-medium-lighter), var(--color-o, 1)); }
+.font-primary {
+  font-family: var(--font-primary);
+}

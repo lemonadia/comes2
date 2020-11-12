@@ -8,18 +8,18 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 :root {
-  --drag-gallery-img-width: 260px; // single image width
-  --drag-gallery-img-gap: var(--space-xxxl); // gap
+  --drag-gallery-img-width: 300px; // single image width
+  --drag-gallery-img-gap: var(--space-xxxxl); // gap
 }
 
 @supports (--css: variables) {
   :root {
     @include breakpoint(sm) {
-      --drag-gallery-img-width: 400px;
+      --drag-gallery-img-width: 300px;
     }
 
     @include breakpoint(md) {
-      --drag-gallery-img-width: 620px;
+      --drag-gallery-img-width: 670px;
     }
   }
 }
@@ -38,22 +38,41 @@ Usage: codyhouse.co/license
   display: flex;
   align-items: center;
   overflow: auto;
-  padding: 0 var(--component-padding);
+  padding: 40px 0 0 0;
 
-  &::after {
-    // never visible - make sure .drag-gallery__list padding-right is applied
-    display: block;
-    content: "";
-    height: 1px;
-    padding-right: inherit;
+  @include breakpoint(md) {
+    padding: 70px 0 0 80px;
   }
+  &:before {
+    content: "";
+    background-color: red;
+    width: 2px;
+    height: 550px;
+    position: absolute;
+    left: 88%;
+    @include breakpoint(md) {
+      left: 65%;
+    }
+    top: 0;
+  }
+
+  // &::after {
+  //   // never visible - make sure .drag-gallery__list padding-right is applied
+  //   display: block;
+  //   content: "";
+  //   height: 1px;
+  //   padding-right: inherit;
+  // }
 }
 
 .drag-gallery__item {
-  float: left; // flex fallback
+  // float: left; // flex fallback
   width: var(--drag-gallery-img-width);
   flex-shrink: 0;
-  margin-right: var(--drag-gallery-img-gap);
+  margin-right: var(--space-xl);
+  @include breakpoint(md) {
+    margin-right: var(--drag-gallery-img-gap);
+  }
 
   &:last-child {
     margin-right: 0;
@@ -67,7 +86,7 @@ Usage: codyhouse.co/license
 .drag-gallery__gesture-hint {
   width: 4em;
   height: 4em;
-  background-color: rgba(#000, 0.95);
+  background-color: red;
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 2em);

@@ -14,7 +14,7 @@ Usage: codyhouse.co/license
 
 @include breakpoint(md) {
   :root {
-    --dr-nav-header-height: 70px;
+    --dr-nav-header-height: 90px;
     --dr-nav-logo-size: 54px;
   }
 }
@@ -25,17 +25,6 @@ Usage: codyhouse.co/license
   position: fixed;
   z-index: var(--zindex-header);
   background-color: red;
-
-  .radio-switch {
-    // style
-    --radio-switch-width: 72px;
-    --radio-switch-height: 32px;
-    --radio-switch-padding: 3px;
-    --radio-switch-radius: 50em;
-
-    // animation
-    --radio-switch-animation-duration: 0.3s;
-  }
 }
 
 // logo
@@ -47,7 +36,7 @@ Usage: codyhouse.co/license
   width: var(--dr-nav-logo-size);
   height: var(--dr-nav-logo-size);
   text-decoration: none;
-  color: var(--color-contrast-high); // logo color
+  // color: var(-s // logo color
   transition: 0.3s;
 
   svg {
@@ -64,9 +53,9 @@ Usage: codyhouse.co/license
 // nav control - menu button
 .dr-nav-control-wrapper {
   position: fixed;
-  z-index: var(--zindex-overlay);
-  top: 0;
-  left: 0;
+  z-index: 9999;
+  top: -20px;
+  left: 20px;
   height: var(--dr-nav-header-height);
   width: 100%;
   pointer-events: none;
@@ -82,20 +71,11 @@ Usage: codyhouse.co/license
   cursor: pointer;
   border-radius: 50%;
   transition: transform 0.3s var(--ease-in-out);
-  color: var(--color-contrast-high); // icon color
-
-  circle {
-    display: none;
-  }
+  color: red;
 
   &.anim-menu-btn--state-b {
     transform: rotate(180deg);
   }
-
-  //   &:hover .dr-nav-control__bg {
-  //     fill: var(--color-contrast-lower);
-  //     opacity: 1;
-  //   }
 }
 
 .dr-nav-control__bg {
@@ -103,7 +83,7 @@ Usage: codyhouse.co/license
   display: block;
   fill: none;
   stroke-width: 1.5;
-  stroke: var(--color-contrast-low); // stroke color
+  stroke: red; // stroke color
   opacity: 0.95;
   position: absolute;
   top: 0;
@@ -119,21 +99,27 @@ Usage: codyhouse.co/license
 }
 
 // drawer
+
 .dr-nav-drawer-header {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   height: var(--dr-nav-header-height);
+  background-color: white;
+}
+.dr-nav {
+  height: 100%;
+  display: flex;
 }
 
 .dr-nav__link {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   text-decoration: none;
-  padding: var(--space-xxxs) 0;
-  color: var(--color-contrast-medium);
+  padding: var(--space-lg) 0;
+  color: red;
+  text-transform: uppercase;
   transition: 0.3s;
+  font-size: 16px;
 
   :nth-child(2)::before {
     content: "";
