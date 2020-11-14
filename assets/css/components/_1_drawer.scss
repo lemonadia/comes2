@@ -13,13 +13,12 @@ Usage: codyhouse.co/license
 
 .drawer {
   position: fixed;
-  z-index: var(--zindex-overlay);
+  z-index: 1000;
   height: 90%;
   width: 220px;
   max-width: var(--drawer-width);
   top: 0;
   right: 0;
-
   // hide drawer
   visibility: hidden;
   // transition: visibility 0s 0.3s;
@@ -36,7 +35,6 @@ Usage: codyhouse.co/license
     top: 0;
     right: 0;
     z-index: 0;
-    // transition: background-color 0.3s;
   }
 }
 

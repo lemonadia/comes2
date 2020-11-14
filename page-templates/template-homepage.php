@@ -17,7 +17,7 @@
                     <div class="grid text-hero">
                         <div class="col-12@md">
                         <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
-                            <a href="/" class="btn block margin-top-sm"><span>Sprawdź naszą ofertę</span>
+                            <a href="#offer" class="btn block margin-top-sm"><span>Sprawdź naszą ofertę</span>
                             </a>
                         </div>
                     </div>
@@ -45,29 +45,30 @@
         </div>
     </section>
 
-    <section class="offer">
+    <section class="offer" id="offer">
         <div class="container max-width-lg padidng-bottom-xl">
             <img src="" alt="">
             <h1 class="header-draw text-uppercase">Oferta</h1>
         </div>
             <div class="drag-gallery js-drag-gallery padding-top-xl">
-                <ul class="drag-gallery__list">
-                    <li class="drag-gallery__item ">
-                         
+                <ul class="drag-gallery__list" >
+                    <a href="<?php echo get_page_link( get_page_by_path( 'geometria' ) ); ?>" class="drag-gallery__item geomery-line">
+                         <h2 class="text-uppercase">Geometria</h2>
+                         <img class="line-geometry" src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry-line.png" alt="szarpak">
                          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry.png" alt="szarpak">
-                    </li>
-                    <li class="drag-gallery__item szarpak-line">
+                    </a>
+                    <a href="<?php echo get_page_link( get_page_by_path( 'szarpaki' ) ); ?>" class="drag-gallery__item szarpak-line">
                          <h2 class="text-uppercase">Szarpaki</h2>
                          <img class="line-szarpak" src="<?php echo get_stylesheet_directory_uri(); ?>/images/line.png" alt="szarpak">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/szarpak.png" alt="szarpak">
-                    </li>
+                    </a>
                 </ul>
              <div aria-hidden="true" class="drag-gallery__gesture-hint"></div>
         </div>
     </section>
     
 
-    <section class="padding-top-xxl about height-100vh">
+    <section class="padding-top-xxl about ">
        <!-- <div class="container max-width-lg"> -->
            <img src="" alt="">
            <h1 class="text-uppercase">O Nas </h1>
@@ -91,10 +92,11 @@
 
     <section class="contact height-100vh">
          <div class="container max-width-lg">
-            <img src="" alt="">
+         <img src="" alt="">
             <!-- <h1 class="header-draw"></h1> -->
-         </div>
-
+        </div>
+        <div>
+           <?php echo do_shortcode("[shortcode]"); ?>
         </div>
     </section>
 

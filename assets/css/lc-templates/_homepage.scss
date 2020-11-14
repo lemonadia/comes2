@@ -96,11 +96,11 @@ body {
     font-size: 17px;
     color: red;
     position: absolute;
-    top: -56%;
+    top: -54%;
     left: 0;
     @include breakpoint(md) {
-      font-size: 30px;
-      left: -10%;
+      font-size: 26px;
+      left: -7%;
     }
   }
   .line-szarpak {
@@ -110,7 +110,33 @@ body {
     }
     position: absolute;
     width: 35%;
-    top: -48%;
+    top: -47%;
     left: 16%;
+  }
+}
+
+.geomery-line {
+  position: relative;
+  h2 {
+    font-size: 17px;
+    color: red;
+    position: absolute;
+    top: -56%;
+    right: 0;
+    @include breakpoint(md) {
+      font-size: 26px;
+      top: -16%;
+      right: -17%;
+    }
+  }
+  .line-geometry {
+    display: none;
+    @include breakpoint(md) {
+      display: block;
+    }
+    position: absolute;
+    width: 30%;
+    top: -12%;
+    left: 60%;
   }
 }

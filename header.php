@@ -26,8 +26,8 @@
 <div class="drawer js-drawer" id="dr-nav-id">
   <div class="drawer__content" role="alertdialog" aria-labelledby="dr-nav-title">
     <div class="drawer__body js-drawer__body">
-      <nav class="dr-nav padding-md" aria-label="Main">
-        <!-- <ul>
+      <nav class="dr-nav aria-label="Main">
+        <ul>
           <li>
             <a class="dr-nav__link" href="#0">
               <span>O nas</span>
@@ -48,7 +48,7 @@
               <span>Kontak</span>
             </a>
           </li>
-        </ul> -->
+        </ul>
       </nav>
     </div>
   </div>
@@ -59,7 +59,7 @@
     <button class="reset margin-left-auto dr-nav-control anim-menu-btn js-anim-menu-btn js-dr-nav-control js-tab-focus" aria-label="Toggle navigation" aria-controls="dr-nav-id">
       <svg class="dr-nav-control__bg" aria-hidden="true" viewBox="0 0 48 48">
       </svg>
-      <i class="anim-menu-btn__icon anim-menu-btn__icon--arrow-right" aria-hidden="true"></i>
+      <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
     </button>
   </div>
 </div>

@@ -1,0 +1,66 @@
+.geometry--posts__module {
+  .item-text {
+    min-height: 150px;
+  }
+  .geometry-item {
+    margin-bottom: 100px;
+    h3 {
+      color: red;
+    }
+    p {
+      color: black;
+      font-size: 16px;
+    }
+    padding: 0 30px;
+
+    border-right: none;
+    @include breakpoint(md) {
+      border-right: 2px solid red;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  &.szarpak {
+    padding: 0 50px;
+  }
+}
+
+.post-image {
+  height: 100% !important;
+}
+
+.post--back {
+  color: #282838;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5em;
+  margin-top: 1.9em;
+
+  @include breakpoint(lg) {
+    left: -100px;
+  }
+  &:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    margin-left: 0.8em;
+    vertical-align: middle;
+    top: -2px;
+    @include breakpoint(sm) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.single-geometry {
+  .truck {
+    width: 10%;
+    height: 100%;
+  }
+}

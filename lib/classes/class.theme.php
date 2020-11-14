@@ -30,6 +30,7 @@ class LESSCODE_Theme {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		wp_enqueue_style( 'codyframe', get_template_directory_uri() . '/assets/css/lc.css', array(), $theme_version );
 		wp_enqueue_script( 'codyframe', get_template_directory_uri() . '/assets/js/scripts.js', array(), $theme_version, true );
+
 		wp_deregister_script( 'jquery' );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -51,29 +52,53 @@ class LESSCODE_Theme {
 	}
 	
 	public function post_types() {
-		register_post_type( 'case_study', array(
+		register_post_type( 'geometry', array(
 			'labels'        => array(
-				'name'          => __( 'Case Studies', 'izo' ),
-				'add_new'       => __( 'Add Case Study', 'izo' ),
-				'add_new_item'  => __( 'Add Case Study', 'izo' ),
-				'edit_item'     => __( 'Edit Case Study', 'izo' ),
-				'singular_name' => __( 'Case Study', 'izo' )
+				'name'          => __( 'Geometria', 'izo' ),
+				'add_new'       => __( 'Dodaj', 'izo' ),
+				'add_new_item'  => __( 'Dodaj', 'izo' ),
+				'edit_item'     => __( 'Edytuj', 'izo' ),
+				'singular_name' => __( 'Geometria', 'izo' )
 			),
 			'public'        => true,
 			'has_archive'   => false,
 			'show_in_menu'  => true,
-			'menu_position' => 4,
 			'supports'      => array(
 				'title',
 				'thumbnail',
 				'editor',
 				'excerpt',
+				'custom-fields', 
 			),
 			'show_in_rest' => true,
 			'rewrite'       => array(
-				'slug' => 'case-study'
+				'slug' => 'geometria'
 			),
 			'menu_icon'     => 'dashicons-admin-generic',
+		) );
+		register_post_type( 'szarpak', array(
+			'labels'        => array(
+				'name'          => __( 'Szarpaki', 'izo' ),
+				'add_new'       => __( 'Dodaj', 'izo' ),
+				'add_new_item'  => __( 'Dodaj', 'izo' ),
+				'edit_item'     => __( 'Edytuj', 'izo' ),
+				'singular_name' => __( 'Szarpak', 'izo' )
+			),
+			'public'        => true,
+			'has_archive'   => false,
+			'show_in_menu'  => true,
+			'supports'      => array(
+				'title',
+				'thumbnail',
+				'editor',
+				'excerpt',
+				'custom-fields', 
+
+			),
+			'show_in_rest' => true,
+			'rewrite'       => array(
+				'slug' => 'szarpaki'
+			),
 		) );
 	}
 	

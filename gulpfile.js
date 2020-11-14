@@ -70,8 +70,8 @@ gulp.task(
   gulp.series(["sass", "scripts"], function () {
     connect.server({}, function () {
       browserSync({
-        host: "http://localhost:82/comes%20",
-        proxy: "http://localhost:82/comes%20", // or proect.dev/app/
+        host: "http://localhost:82/web_comes",
+        proxy: "http://localhost:82/web_comes", // or proect.dev/app/
         port: 3000
       });
     });
