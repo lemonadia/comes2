@@ -1,9 +1,17 @@
 .geometry--posts__module {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   .item-text {
     min-height: 150px;
   }
   .geometry-item {
-    margin-bottom: 100px;
+    flex: 0 0 auto;
+    width: 25%;
+
+    img {
+      height: 100% !important;
+    }
     h3 {
       color: red;
     }
@@ -24,10 +32,6 @@
   &.szarpak {
     padding: 0 50px;
   }
-}
-
-.post-image {
-  height: 100% !important;
 }
 
 .post--back {
@@ -60,7 +64,93 @@
 
 .single-geometry {
   .truck {
-    width: 10%;
+    width: 15%;
     height: 100%;
   }
+  .single-photo {
+    width: 100%;
+    text-align: center;
+    @include breakpoint(sm) {
+      width: 50%;
+    }
+  }
+  .single-description {
+    width: 100%;
+    @include breakpoint(sm) {
+      width: 50%;
+    }
+  }
+}
+.heading-post {
+  color: red;
+}
+
+.line-gallery {
+  display: none;
+  position: absolute;
+  width: 2px;
+  height: 540px;
+  left: 50%;
+  background-color: red;
+  @include breakpoint(sm) {
+    display: block;
+  }
+}
+.gallery {
+  position: relative;
+  &:hover {
+    img {
+      &:first-child {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        opacity: 1;
+      }
+    }
+  }
+  img {
+    &:first-child {
+      max-width: 310px;
+      @include breakpoint(md) {
+        max-width: 460px;
+      }
+      cursor: pointer;
+      z-index: 9999;
+    }
+    &:nth-child(2) {
+      max-width: 310px;
+      @include breakpoint(md) {
+        max-width: 460px;
+      }
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+      margin-left: -155px;
+      top: 0;
+      @include breakpoint(md) {
+        margin-left: -230px;
+      }
+    }
+  }
+}
+
+.tablepress {
+  font-size: 12px;
+  .column-1 {
+    font-weight: bold;
+    width: 20%;
+  }
+  a {
+    display: none;
+  }
+}
+
+.tablepress tbody td,
+.tablepress tfoot th {
+  border: none;
+}
+
+.tablepress tbody td,
+.tablepress tfoot th {
+  padding: 5px;
 }

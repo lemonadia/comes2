@@ -1,0 +1,50 @@
+.contact {
+  h1 {
+    font-size: 36px;
+  }
+  font-size: 16px;
+  padding-left: 0;
+  @include breakpoint(md) {
+    padding-top: 80px;
+    padding-left: 80px;
+  }
+  .form-comes {
+    width: 100%;
+    @include breakpoint(md) {
+      width: 50%;
+    }
+  }
+  .name {
+    color: white;
+    background-color: black;
+    width: fit-content;
+    padding: 2px 8px;
+  }
+  p {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  .wpcf7 {
+    padding: 10px;
+    @include breakpoint(md) {
+      padding: 0 80px 0 0;
+    }
+    input {
+      width: 100%;
+    }
+    textarea {
+      width: 100%;
+    }
+    input[type="submit"] {
+      width: 35%;
+      @include breakpoint(md) {
+        width: 15%;
+      }
+      background-color: red;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      padding: 5px 8px;
+    }
+  }
+}

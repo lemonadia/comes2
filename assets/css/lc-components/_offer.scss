@@ -6,3 +6,12 @@
     }
   }
 }
+
+.logo-offer {
+  width: 50%;
+  padding-top: 20px;
+  @include breakpoint(md) {
+    padding-top: 10px;
+    width: 18%;
+  }
+}

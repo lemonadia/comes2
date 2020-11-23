@@ -127,7 +127,12 @@ Usage: codyhouse.co/license
     will-change: height;
     transform: translateZ(0px);
     p {
-      font-size: 14px;
+      font-size: 12px;
+    }
+    .advantages {
+      ul li {
+        font-size: 12px;
+      }
     }
   }
 

@@ -51,10 +51,11 @@ a {
 section,
 article {
   h1 {
-    border-bottom: 5px solid black;
+    border-bottom: 3px solid black;
     width: fit-content;
     padding-bottom: 5px;
     padding-right: 25px;
+    font-weight: bold;
   }
 }
 @supports (--css: variables) {
@@ -87,4 +88,7 @@ h4 {
 // font family
 .font-primary {
   font-family: var(--font-primary);
+}
+body {
+  box-sizing: border-box;
 }

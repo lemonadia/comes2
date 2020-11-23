@@ -2,103 +2,131 @@
 /*
 * Template Name: Homepage
 */
+$about1 = get_field('about_text');
+$about2 = get_field('about_text2');
 ?>
-    
+
 <?php get_header( ); ?>
 
-<section class="hero flex items-center positinon-relative">
+<section class="hero flex items-center positinon-relative ">
+    <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_comes.png" alt="szarpak">
     <div class="element-hamburger-diagonal"></div>
     <div class="element-hamburger-horizontal"></div>
-        <div class="slideshow js-slideshow slideshow--transition-slide"
-             data-swipe="on">
-            <p class="sr-only">Slideshow Items</p>
-            <ul class="slideshow__content">
-                <li class="slideshow__item js-slideshow__item " style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/hero1.png') center;    background-size: cover;">
-                    <div class="grid text-hero">
-                        <div class="col-12@md">
+    <div class="slideshow js-slideshow slideshow--transition-slide" data-swipe="on">
+        <p class="sr-only">Slideshow Items</p>
+        <ul class="slideshow__content">
+            <li class="slideshow__item js-slideshow__item "
+                style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/hero1.png') center;    background-size: cover;">
+                <div class="grid text-hero position-relative">
+                    <div class="col-12@md">
                         <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
-                            <a href="#offer" class="btn block margin-top-sm"><span>Sprawdź naszą ofertę</span>
-                            </a>
-                        </div>
+                        <a href="#offer" class="btn block margin-top-sm"><span>Sprawdź naszą ofertę</span>
+                        </a>
                     </div>
-                </li>
-            
-                <li class="slideshow__item js-slideshow__item"  style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/hero3.png') center;    background-size: cover;">
-                     <div class="grid">
-                        <div class="col-12@md">
+                </div>
+            </li>
+
+            <li class="slideshow__item js-slideshow__item"
+                style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/hero3.png') center;    background-size: cover;">
+                <div class="grid text-hero position-relative">
+                    <div class="col-12@md">
                         <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
-                            <a href="/" class=" btn color-secondary text-md block margin-top-sm"><span>Sprawdź naszą ofertę</span>
-                            </a>
-                        </div>
+                        <a href="#offer" class=" btn color-secondary text-md block margin-top-sm"><span>Sprawdź naszą
+                                ofertę</span>
+                        </a>
                     </div>
-                </li>
-                <li class="slideshow__item js-slideshow__item">
-                  <div class="grid">
-                        <div class="col-12@md">
+                </div>
+            </li>
+            <li class="slideshow__item js-slideshow__item">
+                <div class="grid text-hero position-relative">
+                    <div class="col-12@md">
                         <h1 class="flex color-primary text-uppercase">Perfekcja <br>W Diagnostyce</h1>
-                            <a href="/" class="color-secondary text-md block margin-top-sm"><span>Sprawdź naszą ofertę</span>
-                            </a>
+                        <a href="#offer" class=" btn color-secondary text-md block margin-top-sm"><span>Sprawdź naszą
+                                ofertę</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="padding-top-xl offer" id="offer">
+    <div class="container max-width-lg padidng-bottom-xl">
+        <img src="" alt="">
+        <h1 class="header-draw text-uppercase">Oferta</h1>
+    </div>
+    <div class="drag-gallery js-drag-gallery padding-top-xl position-relative">
+        <ul class="drag-gallery__list">
+            <a href="<?php echo get_page_link( get_page_by_path( 'geometria' ) ); ?>"
+                class="drag-gallery__item geomery-line">
+                <h2 class="text-uppercase">Geometria</h2>
+                <img class="line-geometry" src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry-line.png"
+                    alt="szarpak">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry.png" alt="szarpak">
+            </a>
+            <a href="<?php echo get_page_link( get_page_by_path( 'szarpaki' ) ); ?>"
+                class="drag-gallery__item szarpak-line">
+                <h2 class="text-uppercase">Szarpaki</h2>
+                <img class="line-szarpak" src="<?php echo get_stylesheet_directory_uri(); ?>/images/line.png"
+                    alt="szarpak">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/szarpak.png" alt="szarpak">
+            </a>
+        </ul>
+        <div aria-hidden="true" class="drag-gallery__gesture-hint"></div>
+    </div>
+</section>
+
+
+<section class="padding-top-xl about" id="about">
+    <img src="" alt="">
+    <h1 class="text-uppercase">O Nas </h1>
+    <div class="flex  flex-column flex-row@md items-center@md">
+        <div class="about-text padding-top-xl">
+            <p class="text-uppercase margin-bottom-xxxs">comes</p>
+            <p class="margin-bottom-lg">urządzenia do diagnostyki pojazdów</p>
+            <p><?php echo $about1; ?></p>
+            <ul class="accordion  js-accordion hide@md" data-animation="on" data-multi-items="on">
+
+                <li class="accordion__item accordion__item--is-open js-accordion__item">
+                    <button class="reset accordion__header padding-y-sm  js-tab-focus" type="button">
+                        <span class="text-md">więcej >></span>
+                    </button>
+
+                    <div class="accordion__panel js-accordion__panel">
+                        <div class="text-component padding-top-xxxs  padding-bottom-md">
+                            <?php echo $about2; ?>
                         </div>
                     </div>
                 </li>
             </ul>
+            <p class="padding-top-sm display@xs"><?php echo $about2; ?></p>
+            <a href="/" class="btn btn--contact block text-uppercase"><span>Skontaktuj się z nami</span></a>
         </div>
-    </section>
-
-    <section class="offer" id="offer">
-        <div class="container max-width-lg padidng-bottom-xl">
-            <img src="" alt="">
-            <h1 class="header-draw text-uppercase">Oferta</h1>
-        </div>
-            <div class="drag-gallery js-drag-gallery padding-top-xl">
-                <ul class="drag-gallery__list" >
-                    <a href="<?php echo get_page_link( get_page_by_path( 'geometria' ) ); ?>" class="drag-gallery__item geomery-line">
-                         <h2 class="text-uppercase">Geometria</h2>
-                         <img class="line-geometry" src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry-line.png" alt="szarpak">
-                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/geometry.png" alt="szarpak">
-                    </a>
-                    <a href="<?php echo get_page_link( get_page_by_path( 'szarpaki' ) ); ?>" class="drag-gallery__item szarpak-line">
-                         <h2 class="text-uppercase">Szarpaki</h2>
-                         <img class="line-szarpak" src="<?php echo get_stylesheet_directory_uri(); ?>/images/line.png" alt="szarpak">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/szarpak.png" alt="szarpak">
-                    </a>
-                </ul>
-             <div aria-hidden="true" class="drag-gallery__gesture-hint"></div>
-        </div>
-    </section>
-    
-
-    <section class="padding-top-xxl about ">
-       <!-- <div class="container max-width-lg"> -->
-           <img src="" alt="">
-           <h1 class="text-uppercase">O Nas </h1>
-            <div class="flex  flex-column flex-row@md items-center@md gap-lg">
-                <div class="about-text">
-                    <p class="text-uppercase margin-bottom-xxxs">comes</p>
-                    <p class="margin-bottom-md">urządzenia do diagnostyki pojazdów</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                    <p class="padding-top-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                    <a href="/" class="btn btn--contact margin-top-xxxxl@md block text-uppercase"><span>Skontaktuj się z nami</span></a>
-
-                </div>
-                <div class="about-image">
-                    <div class="image-about">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aboutphoto.png" alt="szarpak">
-                    </div>
-                </div>
+        <div class="about-image">
+            <div class="image-about">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aboutphoto.png" alt="">
             </div>
-       <!-- </div> -->
-    </section>
+        </div>
+    </div>
+</section>
 
-    <section class="contact height-100vh">
-         <div class="container max-width-lg">
-         <img src="" alt="">
-            <!-- <h1 class="header-draw"></h1> -->
+<section class="contact" id="contact">
+    <div class="flex flex-column flex-row@md">
+        <div class="map width-50%"></div>
+        <div class="form-comes">
+            <h1 class="text-uppercase margin-bottom-md">Kontakt</h1>
+            <div class="padding-bottom-xxl">
+                <span class="name">COMES - Grzegorz Legomiński</span>
+            </div>
+            <div>
+                <span class="text-uppercase  block padding-bottom-xs">Wyślij nam wiadomość</span>
+                <?php echo do_shortcode( '[contact-form-7 id="27" title="Formularz 1"]' ); ?>
+            </div>
         </div>
-        <div>
-           <?php echo do_shortcode("[shortcode]"); ?>
-        </div>
-    </section>
+    </div>
+
+</section>
 
 
 <?php get_footer(); ?>

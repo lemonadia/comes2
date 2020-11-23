@@ -8,14 +8,14 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 :root {
-  --drag-gallery-img-width: 300px; // single image width
+  --drag-gallery-img-width: 350px; // single image width
   --drag-gallery-img-gap: var(--space-xxxxl); // gap
 }
 
 @supports (--css: variables) {
   :root {
     @include breakpoint(sm) {
-      --drag-gallery-img-width: 300px;
+      --drag-gallery-img-width: 350px;
     }
 
     @include breakpoint(md) {
@@ -43,43 +43,89 @@ Usage: codyhouse.co/license
   @include breakpoint(md) {
     padding: 70px 0 0 80px;
   }
-  &:before {
-    content: "";
-    background-color: red;
-    width: 2px;
-    height: 550px;
-    position: absolute;
-    left: 88%;
-    @include breakpoint(md) {
-      left: 65%;
-    }
-    top: 0;
-  }
 
-  // &::after {
-  //   // never visible - make sure .drag-gallery__list padding-right is applied
-  //   display: block;
-  //   content: "";
-  //   height: 1px;
-  //   padding-right: inherit;
-  // }
+  &::after {
+    // never visible - make sure .drag-gallery__list padding-right is applied
+    display: block;
+    content: "";
+    height: 1px;
+    padding-right: inherit;
+  }
 }
 
 .drag-gallery__item {
   // float: left; // flex fallback
   width: var(--drag-gallery-img-width);
   flex-shrink: 0;
-  margin-right: var(--space-xl);
+  margin-right: 84px;
+
   @include breakpoint(md) {
     margin-right: var(--drag-gallery-img-gap);
+  }
+  &:first-child {
+    h2 {
+      right: 50%;
+      font-size: 16px;
+      color: red;
+      position: absolute;
+      font-weight: bold;
+      @include breakpoint(md) {
+        font-size: 23px;
+        right: -20%;
+      }
+    }
   }
 
   &:last-child {
     margin-right: 0;
+    h2 {
+      right: 50%;
+      font-size: 16px;
+      color: red;
+      position: absolute;
+      font-weight: bold;
+      top: -30%;
+      @include breakpoint(md) {
+        font-size: 23px;
+        left: -22%;
+        top: -29%;
+      }
+    }
   }
 
   img {
     display: block;
+  }
+  &:first-child {
+    &:after {
+      content: "";
+      background-color: red;
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      left: 108.5%;
+      transform: rotate(45deg);
+
+      @include breakpoint(md) {
+        width: 15px;
+        height: 15px;
+        left: 124%;
+      }
+      top: 50%;
+    }
+    &:before {
+      content: "";
+      background-color: red;
+      width: 2px;
+      height: 550px;
+      position: absolute;
+      left: 110%;
+
+      @include breakpoint(md) {
+        left: 125%;
+      }
+      top: 0;
+    }
   }
 }
 

@@ -16,6 +16,10 @@ Usage: codyhouse.co/license
 }
 
 .anim-menu-btn {
+  margin-top: 50px;
+  @include breakpoint(md) {
+    margin-top: 0px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;

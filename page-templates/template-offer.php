@@ -7,17 +7,19 @@
 
 
 
-<section  class="offer-geometry padding-top-xl padding-bottom-xl">
-        <div class="container max-width-lg">
-            <div class="grid">
-                <div class="col-6@lg">
-                   <a href="#" onclick="history.back()"  class="post--back">Powrót</a>
-                    <h1 class="text-uppercase">Oferta<span class="margin-left-sm subheading">geometria</span></h1>
-                </div>
+<section class="offer-geometry padding-bottom-sm">
+    <div class="container max-width-lg">
+        <img class="logo-offer" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-dark.png"
+            alt="logo comes">
+        <div class="grid">
+            <div class="col-6@lg">
+                <a href="#" onclick="history.back()" class="post--back">Powrót</a>
+                <h1 class="text-uppercase">Oferta<span class="margin-left-sm subheading">geometria</span></h1>
             </div>
-            <div class="grid facetwp-template padding-top-xl padding-bottom-xl geometry--posts__module flex justify-between">
-                <?php
-
+        </div>
+    </div>
+    <div class="grid facetwp-template padding-top-xl padding-bottom-xl geometry--posts__module flex justify-between">
+        <?php
                     $args = array(
                         'post_type' => 'geometry',
                         'posts_per_page' => 100,
@@ -28,8 +30,8 @@
                     endwhile;
                     wp_reset_query();
                     ?>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <?php get_footer( ); ?>
+</section>
+
+<?php get_footer( ); ?>
